@@ -104,6 +104,8 @@ console.log(typeof(miNombre))
 ```
 ![Ejemplo typeOfVariableconsola](./ejemplosCodigo/typeOfVariableconsola.png)
 
+Como se observa en la consola, el tipo de dato es `string`
+
 También se puede consultar un tipo de dato de manera literal, por ejemplo:
 ```
 console.log(typeOf (42))
@@ -111,7 +113,16 @@ console.log(typeOf (42))
 
 ![Ejemplo typeOfVariableconsola](./ejemplosCodigo/typeOf42consola.png)
 
+Como se observa en la consola, el tipo de dato es `number`
+
 ### Cosas a tener en cuenta sobre tipos de datos
 - JavaScript trata string vacios `("")`, al `0` , `undefined` y `null` como `false`. Todo el resto es `true`.
-- 
 
+## Operadores Aritméticos
+- ( `-` ) resta
+- ( `+` ) suma
+- ( `*` ) multiplicación
+- ( `/` ) división (cociente)
+- ( `%` ) módulo (resto de una división)
+
+## Operadores de Comparación
