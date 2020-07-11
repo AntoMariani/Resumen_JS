@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Resumen Javascript</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="resumen-javascript">Resumen Javascript</h1>
+<h2 id="variables">Variables</h2>
+<ul>
+<li><code>var</code> crea una variable global, puede re-asignarse y puede no asignarse un valor (a.k.a crearse vacía).</li>
+<li><code>let</code> crea una variable local, puede re-asignarse y puede no asignarse un valor (a.k.a crearse vacía).</li>
+<li><code>const</code> es una variable local, pero es constante, lo que significa que debe asignarse un valor si o si al ser creada y no puede ser reasignada bajo ninguna circunstancia en el resto del
+programa.</li>
+</ul>
+<h2 id="consola">Consola</h2>
+<p>Según <a href="https://developer.mozilla.org/es/docs/Tools/Web_Console" title="Consola Web">MDN web docs</a> la consola web:</p>
+<ol>
+<li>Muestra la informacion asociada con los Logs de la pagina Web: cualquier solicitud de red, JavaScript, CSS, y errores de seguridad y advertencias, asi como tambien, advertencias, mensajes informativos explicitamente generados por Javascript en tiempo de ejecucion dentro del contexto de la pagina.</li>
+<li>te permite interactuar con la pagina ejecutando expresiones Javascript en el contexto de la página.</li>
+</ol>
+<p>La manera de interactuar con ésta es a través del método <code>console.log()</code> por ejemplo</p>
+<pre><code><code><div>var miNombre = &quot;Anto&quot;
+console.log(miNombre)
+</div></code></code></pre>
+<p>Una vez tenemos abierto nuestro html en el navegador podemos acceder a ella. En Chrome la manera rápida es apretando la tecla <strong>F12</strong>. La segunda solapa que encontraremos es <em>&quot;Console&quot;</em>.</p>
+<p>En nuestro caso, debido al ejemplo anterior, veremos el valor <strong>&quot;Anto&quot;</strong> impreso en ella.</p>
+<p><img src="file:///c:\Users\Antonella\Desktop\camada-codingbootcamp-0117\ResumenJS-Markdown\ejemplosCodigo\consolelogAnto.png" alt="Ejemplo console.log"></p>
+<h2 id="el-operador-de-asignación-">El Operador de Asignación &quot;=&quot;</h2>
+<p>El signo igual <code>=</code> en Javascript se utiliza para asignar el valor de una variable a la variable en si.</p>
+<pre><code><code><div>var x = 5 + 4;
+</div></code></code></pre>
+<p>Asigna el valor que resulta de la suma de <code>5 + 4</code> a la variable <code>x</code>. Entonces si hacemos un print de pantalla</p>
+<h2 id="tipos-de-datos">Tipos de Datos</h2>
+<h3 id="primitivos">Primitivos</h3>
+<ul>
+<li><strong>Undefined</strong>: Cuando se crea una variable pero no se le asigna un dato.</li>
+</ul>
+<pre><code><code><div>var variableUndefined
+</div></code></code></pre>
+<ul>
+<li><strong>Null</strong>: El &quot;null&quot; es directamente un tipo de dato en sí mismo.</li>
+</ul>
+<pre><code><code><div>var variableNula = null
+</div></code></code></pre>
+<ul>
+<li><strong>String</strong>: Una cadena de caracteres alfanuméricos. Se define entre comillas.</li>
+</ul>
+<pre><code><code><div>var variableCadena = &quot;Hola, todo bien? Tengo 22 años.&quot;
+</div></code></code></pre>
+<ul>
+<li><strong>Number</strong>: Numeros enteros</li>
+</ul>
+<pre><code><code><div>var variableNumero = 16
+</div></code></code></pre>
+<ul>
+<li><strong>Boolean</strong>: El &quot;null&quot; es directamente un tipo de dato en sí mismo. Tiene solo dos valores: <em>verdadero</em> y <em>falso</em>. Sirve para cuando se necesiten variables donde los valores deban ser <em>SI</em> / <em>NO</em> - <em>ON</em> / <em>OFF</em> - <em>TRUE</em> / <em>FALSE</em>.</li>
+</ul>
+<pre><code><code><div>var variableBooleanaVerdadera = true
+</div></code></code></pre>
+<pre><code><code><div>var variableBooleanaFalsa = false
+</div></code></code></pre>
+<ul>
+<li><strong>Number</strong>: Numeros enteros</li>
+</ul>
+<pre><code><code><div>var variableNumero = 16
+</div></code></code></pre>
+<h3 id="tipo-objeto">Tipo Objeto</h3>
+<p>El objeto es un tipo de variable que se inicializa con un nombre y una coleccion de propiedades, las cuales pueden ser modificadas, agregar nuevas y eliminar ya existentes.
+Mas adelante en el resumen veremos como acceder a las propiedades y más información sobre los objetos.</p>
+<p>Existen dos maneras de crear un objeto en JS.</p>
+<pre><code><code><div>var person = new Object();
+persona.nombre = &quot;John&quot;;
+persona.apellido = &quot;Doe&quot;;
+persona.edad = 50;
+persona.colorDeOjos = &quot;azul&quot;;
+</div></code></code></pre>
+<pre><code><code><div>var persona = {
+    nombre:&quot;John&quot;,
+    apellido:&quot;Doe&quot;,
+    edad:50,
+    colorDeOjos:&quot;azul&quot;};
+</div></code></code></pre>
+<p>También se puede crear vacío de la siguiente manera</p>
+<pre><code><code><div>var persona = {};
+</div></code></code></pre>
+<h3 id="cómo-saber-el-tipo-de-dato-de-una-variable">¿Cómo saber el tipo de dato de una variable?</h3>
+<p>Con el método <code>typeof</code> o <code>typeOf()</code> de la siguientes dos maneras</p>
+<pre><code><code><div>typeOf(variable)
+</div></code></code></pre>
+<pre><code><code><div>typeOf variable
+</div></code></code></pre>
+<p>También se puede consultar un tipo de dato de manera literal, por ejemplo:</p>
+<pre><code><code><div>typeOf (42)
+</div></code></code></pre>
+<p><em>///Output esperado: Number</em></p>
+<h3 id="cosas-a-tener-en-cuenta-sobre-tipos-de-datos">Cosas a tener en cuenta sobre tipos de datos</h3>
+<ul>
+<li>JavaScript trata string vacios <code>(&quot;&quot;)</code>, al <code>0</code> , <code>undefined</code> y <code>null</code> como <code>false</code>. Todo el resto es <code>true</code>.</li>
+</ul>
+
+    </body>
+    </html>
