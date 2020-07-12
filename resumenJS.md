@@ -405,6 +405,6 @@ Nuestra consola va a mostrar lo siguiente:
 
 Donde podemos ver que la variable existe dentro y fuera del `for`.
 
-**DATO:** La variable `i` por fuera del `for` muestra el número 11 y no 10 porque antes de entrar a hacer de nuevo el loop 
+**DATO:** La variable `i` por fuera del `for` muestra el número 11 y no 10 porque antes de "entrar" a hacer de nuevo el loop, en cada ejecución lo que hace es aumenta `i` en el valor que nosotros hayamos puesto de antemano _(en nuestro ejemplo `i++`)_ y ahí realiza la consulta _(en nuestro ejemplo `i <= 10`)_, como 11 no es <= 10 sale del `for`, pero a `i` lo deja aumentado.
 
 ### while
