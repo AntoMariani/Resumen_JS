@@ -1,13 +1,34 @@
-# Resumen Javascript
+- [1. Resumen Javascript](#1-resumen-javascript)
+  - [1.1. Variables](#11-variables)
+  - [1.2. Consola](#12-consola)
+  - [1.3. El Operador de Asignación "="](#13-el-operador-de-asignación-)
+  - [1.4. Tipos de Datos](#14-tipos-de-datos)
+    - [1.4.1. Primitivos](#141-primitivos)
+    - [1.4.2. Tipo Objeto](#142-tipo-objeto)
+    - [1.4.3. ¿Cómo saber el tipo de dato de una variable?](#143-cómo-saber-el-tipo-de-dato-de-una-variable)
+    - [1.4.4. Cosas a tener en cuenta sobre tipos de datos](#144-cosas-a-tener-en-cuenta-sobre-tipos-de-datos)
+  - [1.5. Operadores Aritméticos](#15-operadores-aritméticos)
+  - [1.6. Operadores de Comparación](#16-operadores-de-comparación)
+  - [1.7. Conectores](#17-conectores)
+  - [1.8. Condicionales](#18-condicionales)
+    - [1.8.1. IF](#181-if)
+    - [1.8.2. IF...ELSE](#182-ifelse)
+    - [1.8.3. IF…ELSE IF](#183-ifelse-if)
+    - [1.8.4. SWITCH](#184-switch)
+  - [1.9. Loops / Bucles](#19-loops--bucles)
+    - [1.9.1. for](#191-for)
+    - [1.9.2. while](#192-while)
 
-## Variables
+# 1. Resumen Javascript
+
+## 1.1. Variables
 - `var` crea una variable global, puede re-asignarse y puede no asignarse un valor (a.k.a crearse vacía).
 -  `let` crea una variable local, puede re-asignarse y puede no asignarse un valor (a.k.a crearse vacía).
 -  `const` es una variable local, pero es constante, lo que significa que debe asignarse un valor si o si al ser creada y no puede ser reasignada bajo ninguna circunstancia en el resto del 
 programa.
 
 
-## Consola
+## 1.2. Consola
 Según [MDN web docs](https://developer.mozilla.org/es/docs/Tools/Web_Console "Consola Web") la consola web:
 1. Muestra la informacion asociada con los Logs de la pagina Web: cualquier solicitud de red, JavaScript, CSS, y errores de seguridad y advertencias, asi como tambien, advertencias, mensajes informativos explicitamente generados por Javascript en tiempo de ejecucion dentro del contexto de la pagina.
 2. te permite interactuar con la pagina ejecutando expresiones Javascript en el contexto de la página.
@@ -25,7 +46,7 @@ En nuestro caso, debido al ejemplo anterior, veremos el valor **"Anto"** impreso
 
 ![Ejemplo console.log](./ejemplosCodigo/consolelogAnto.png)
 
-## El Operador de Asignación "="
+## 1.3. El Operador de Asignación "="
 El signo igual `=` en Javascript se utiliza para asignar el valor de una variable a la variable en si.
 
 ```
@@ -33,8 +54,8 @@ var x = 5 + 4;
 ```
 Asigna el valor que resulta de la suma de `5 + 4` a la variable `x`. Entonces si hacemos un print de pantalla
 
-## Tipos de Datos
-### Primitivos
+## 1.4. Tipos de Datos
+### 1.4.1. Primitivos
 - **Undefined**: Cuando se crea una variable pero no se le asigna un dato.
 ```
 var variableUndefined
@@ -63,7 +84,7 @@ var variableBooleanaFalsa = false
 var variableNumero = 16
 ```
 
-### Tipo Objeto
+### 1.4.2. Tipo Objeto
 El objeto es un tipo de variable que se inicializa con un nombre y una coleccion de propiedades, las cuales pueden ser modificadas, agregar nuevas y eliminar ya existentes.
 Mas adelante en el resumen veremos como acceder a las propiedades y más información sobre los objetos. 
 
@@ -87,7 +108,7 @@ También se puede crear vacío de la siguiente manera
 ```
 var persona = {};
 ```
-### ¿Cómo saber el tipo de dato de una variable?
+### 1.4.3. ¿Cómo saber el tipo de dato de una variable?
 Con el método `typeof` o `typeOf()` de la siguientes dos maneras
 ```
 console.log(typeOf(variable))
@@ -115,10 +136,10 @@ console.log(typeOf (42))
 
 Como se observa en la consola, el tipo de dato es `number`
 
-### Cosas a tener en cuenta sobre tipos de datos
+### 1.4.4. Cosas a tener en cuenta sobre tipos de datos
 - JavaScript trata string vacios `("")`, al `0` , `undefined` y `null` como `false`. Todo el resto es `true`.
 
-## Operadores Aritméticos
+## 1.5. Operadores Aritméticos
 - ( `-` ) resta
 - ( `+` ) suma
 - ( `*` ) multiplicación
@@ -144,7 +165,7 @@ es igual a hacer
 var i += 1
 ```
 
-## Operadores de Comparación
+## 1.6. Operadores de Comparación
 
 En ocaciones precisamos de operadores que nos permitan comparar entre una variable y otra, o un valor en especifico y una variable. 
 
@@ -168,7 +189,7 @@ Las preguntas devulven un valor booleano (`true` o `false`) Es cuando entran los
  
 - ( `>=` ) Mayor o igual que
 
-## Conectores
+## 1.7. Conectores
 Ya aprendimos como comparar dos variables, pero a veces precisamos hacer preguntas mas extensas y comparar más valores, por ejemplo:
 
 ¿Es la variable `x > 18` **Y** `x < 30`?
@@ -181,9 +202,9 @@ Para ésto nos ayudamos con los siguientes operadores, los cuales también devue
 
  - ( `&&` ) significa ‘Y’ da verdadero cuando todas las condiciones unidas por éste se cumplen.
 
-## Condicionales
+## 1.8. Condicionales
 
-### IF
+### 1.8.1. IF
 
 Para realizar las preguntas de las que venimos hablando anteriormente en Conectores y Operadores de Comparación existe una función llamada `if`. Es una función de decisión, realiza una pregunta y si es verdadera se ejecuta el primer bloque de código inmediato que especifiquemos debajo.
 
@@ -205,7 +226,7 @@ if(edad > 18){
 ```
 ![Ejemplo IF](./ejemplosCodigo/ejemploIF.png)
 
-### IF...ELSE
+### 1.8.2. IF...ELSE
 
 Pero ¿qué pasa si la edad pasa a ser 17, por ejemplo?
 
@@ -224,7 +245,7 @@ if(edad > 18){
 Entonces, ahora sí veríamos en consola el mensaje "Es menor de edad", ya que 17 no es mayor a 18, por lo que la sentencia es falsa entonces saldría por la parte falsa de la pregunta: el else.
 
 
-### IF…ELSE IF
+### 1.8.3. IF…ELSE IF
 En ocasiones necesitamos tener varias opciones de preguntas. 
 
 Por ejemplo: crearemos un programa que nos diga si el color que entran por variable son primarios o no.
@@ -288,7 +309,7 @@ Esto en nuestro ejemplo no tiene mucho sentido, ya que lo que estaría preguntan
 ¿La variable `color` es rojo, azul y amarillo a la vez?
 Ya que para ser considerada verdadera la condición deben cumplirse las tres, por estar unidas con el operador llamado `AND` o `Y` o `&&`.  
 
-### SWITCH
+### 1.8.4. SWITCH
 A veces al tener una gran cantidad de opciones, la sintaxis del `if..else if` resulta engorrosa, ahí es cuando es de ayuda el `switch`.
 
 La sintaxis es la siguiente:
@@ -323,10 +344,10 @@ Cada opción o `case` se identifica en un renglon, seguido de dos puntos ( `:` )
 
 También cuenta con una opción con la misma funcionalidad del `else` llamada `default`. En caso de que las opciones anteriores no hayan sido verdaderas, entonces ejecuta el código especificado debajo. No es obligatorio utilizarlo.
 
-## LOOP
+## 1.9. Loops / Bucles
 Los loops se utilizan cuando necesitamos que determinado bloque de código se ejecute varias veces sin la necesidad de escribir una y otra vez las líneas de código.
 
-### for
+### 1.9.1. for
 Cuando sabemos la cantidad de veces que se ejecutará el bloque de código podemos utilizar el `for`. Vamos a repasar la sintaxis con un ejemplo:
 
 Realicemos un programa que cuente del 0 al 10.
@@ -407,4 +428,4 @@ Donde podemos ver que la variable existe dentro y fuera del `for`.
 
 **DATO:** La variable `i` por fuera del `for` muestra el número 11 y no 10 porque antes de "entrar" a hacer de nuevo el loop, en cada ejecución lo que hace es aumenta `i` en el valor que nosotros hayamos puesto de antemano _(en nuestro ejemplo `i++`)_ y ahí realiza la consulta _(en nuestro ejemplo `i <= 10`)_, como 11 no es <= 10 sale del `for`, pero a `i` lo deja aumentado.
 
-### while
+### 1.9.2. while
