@@ -2,7 +2,7 @@
     <html>
     <head>
         <meta charset="UTF-8">
-        <title>Resumen Javascript</title>
+        <title>1. Resumen Javascript</title>
         <style>
 </style>
         
@@ -23,41 +23,99 @@
         
     </head>
     <body class="vscode-light">
-        <h1 id="resumen-javascript">Resumen Javascript</h1>
-<h2 id="variables">Variables</h2>
+        <ul>
+<li><a href="#1-resumen-javascript">1. Resumen Javascript</a>
+<ul>
+<li><a href="#11-c%C3%B3mo-hacer-el-link-entre-el-js-y-el-html">1.1. ¿Cómo hacer el link entre el .js y el .html?</a></li>
+<li><a href="#12-valores-literales-y-variables">1.2. Valores literales y variables</a>
+<ul>
+<li><a href="#121-literales">1.2.1. Literales</a></li>
+<li><a href="#122-variables">1.2.2. Variables</a>
+<ul>
+<li><a href="#1221-el-operador-de-asignaci%C3%B3n-">1.2.2.1. El Operador de Asignación &quot;=&quot;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#13-consola">1.3. Consola</a></li>
+<li><a href="#14-tipos-de-datos">1.4. Tipos de Datos</a>
+<ul>
+<li><a href="#141-primitivos">1.4.1. Primitivos</a></li>
+<li><a href="#142-objeto">1.4.2. Objeto</a></li>
+<li><a href="#143-c%C3%B3mo-saber-el-tipo-de-dato-de-una-variable">1.4.3. ¿Cómo saber el tipo de dato de una variable?</a></li>
+</ul>
+</li>
+<li><a href="#15-operadores-aritm%C3%A9ticos">1.5. Operadores Aritméticos</a></li>
+<li><a href="#16-operadores-de-comparaci%C3%B3n">1.6. Operadores de Comparación</a></li>
+<li><a href="#17-conectores">1.7. Conectores</a></li>
+<li><a href="#18-condicionales">1.8. Condicionales</a>
+<ul>
+<li><a href="#181-if">1.8.1. if</a></li>
+<li><a href="#182-ifelse">1.8.2. if...else</a></li>
+<li><a href="#183-ifelse-if">1.8.3. if…else if</a></li>
+<li><a href="#184-switch">1.8.4. switch</a></li>
+</ul>
+</li>
+<li><a href="#19-loops--bucles">1.9. Loops / Bucles</a>
+<ul>
+<li><a href="#191-for">1.9.1. for</a></li>
+<li><a href="#192-while">1.9.2. while</a></li>
+<li><a href="#193-do-while">1.9.3. do while</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-resumen-javascript">1. Resumen Javascript</h1>
+<h2 id="11-cómo-hacer-el-link-entre-el-js-y-el-html">1.1. ¿Cómo hacer el link entre el .js y el .html?</h2>
+<p>El link se hace con la siguiente sentencia.</p>
+<pre><code><code><div>&lt;script src=&quot;linkATuScrips.js&quot;&gt;&lt;/script&gt;
+</div></code></code></pre>
+<p>Una buena práctica es colocarlo debajo del body.</p>
+<h2 id="12-valores-literales-y-variables">1.2. Valores literales y variables</h2>
+<h3 id="121-literales">1.2.1. Literales</h3>
+<p>Los literales son valores, como indica su nombre, literales. Algunos ejemplos son números o cadenas de caractéres / palabras (llamadas <code>strings</code> mas adelante):</p>
+<ul>
+<li>15</li>
+<li>13.08</li>
+<li>&quot;hola, ¿todo bien?&quot;</li>
+</ul>
+<h3 id="122-variables">1.2.2. Variables</h3>
+<p>Las variables se utilizan para alojar valores dentro de ellas y poder manipularlos a lo largo del programa.</p>
 <ul>
 <li><code>var</code> crea una variable global, puede re-asignarse y puede no asignarse un valor (a.k.a crearse vacía).</li>
 <li><code>let</code> crea una variable local, puede re-asignarse y puede no asignarse un valor (a.k.a crearse vacía).</li>
 <li><code>const</code> es una variable local, pero es constante, lo que significa que debe asignarse un valor si o si al ser creada y no puede ser reasignada bajo ninguna circunstancia en el resto del
 programa.</li>
 </ul>
-<h2 id="consola">Consola</h2>
+<h4 id="1221-el-operador-de-asignación-">1.2.2.1. El Operador de Asignación &quot;=&quot;</h4>
+<p>El signo igual <code>=</code> en Javascript se utiliza para asignar un valor a una variable:</p>
+<pre><code><code><div>var x = 5;
+</div></code></code></pre>
+<p>Asigna el valor <code>5</code> a la variable <code>x</code>. Entonces si viesemos el contenido de <code>x</code>, sería <code>5</code>.</p>
+<h2 id="13-consola">1.3. Consola</h2>
 <p>Según <a href="https://developer.mozilla.org/es/docs/Tools/Web_Console" title="Consola Web">MDN web docs</a> la consola web:</p>
 <ol>
 <li>Muestra la informacion asociada con los Logs de la pagina Web: cualquier solicitud de red, JavaScript, CSS, y errores de seguridad y advertencias, asi como tambien, advertencias, mensajes informativos explicitamente generados por Javascript en tiempo de ejecucion dentro del contexto de la pagina.</li>
 <li>te permite interactuar con la pagina ejecutando expresiones Javascript en el contexto de la página.</li>
 </ol>
-<p>La manera de interactuar con ésta es a través del método <code>console.log()</code> por ejemplo</p>
-<pre><code><code><div>var miNombre = &quot;Anto&quot;
-console.log(miNombre)
+<p>La manera de interactuar con ésta es a través del método <code>console.log()</code> siguiendo el ejemplo anterior:</p>
+<pre><code><code><div>var x = 5;
+console.log(x)
 </div></code></code></pre>
-<p>Una vez tenemos abierto nuestro html en el navegador podemos acceder a ella. En Chrome la manera rápida es apretando la tecla <strong>F12</strong>. La segunda solapa que encontraremos es <em>&quot;Console&quot;</em>.</p>
-<p>En nuestro caso, debido al ejemplo anterior, veremos el valor <strong>&quot;Anto&quot;</strong> impreso en ella.</p>
+<p>Una vez tenemos abierto nuestro HTML en el navegador podemos acceder a ella de la siguiente manera:</p>
+<p>En Chrome la manera rápida es apretando la tecla <strong>F12</strong> Y clickeando la segunda solapa llamada <em>&quot;Console&quot;</em>.</p>
+<p>En nuestro caso, debido al ejemplo anterior, veremos el valor <strong>5</strong> impreso en ella.</p>
 <p><img src="file:///c:\Users\Antonella\Desktop\ResumenJS-Markdown\ejemplosCodigo\consolelogAnto.png" alt="Ejemplo console.log"></p>
-<h2 id="el-operador-de-asignación-">El Operador de Asignación &quot;=&quot;</h2>
-<p>El signo igual <code>=</code> en Javascript se utiliza para asignar el valor de una variable a la variable en si.</p>
-<pre><code><code><div>var x = 5 + 4;
-</div></code></code></pre>
-<p>Asigna el valor que resulta de la suma de <code>5 + 4</code> a la variable <code>x</code>. Entonces si hacemos un print de pantalla</p>
-<h2 id="tipos-de-datos">Tipos de Datos</h2>
-<h3 id="primitivos">Primitivos</h3>
+<h2 id="14-tipos-de-datos">1.4. Tipos de Datos</h2>
+<h3 id="141-primitivos">1.4.1. Primitivos</h3>
 <ul>
-<li><strong>Undefined</strong>: Cuando se crea una variable pero no se le asigna un dato.</li>
+<li><strong>Undefined</strong>: Cuando se crea una variable pero no se le asigna un valor.</li>
 </ul>
 <pre><code><code><div>var variableUndefined
 </div></code></code></pre>
 <ul>
-<li><strong>Null</strong>: El &quot;null&quot; es directamente un tipo de dato en sí mismo.</li>
+<li><strong>Null</strong>: El &quot;null&quot; o nulo es directamente un tipo de dato en sí mismo.</li>
 </ul>
 <pre><code><code><div>var variableNula = null
 </div></code></code></pre>
@@ -78,12 +136,7 @@ console.log(miNombre)
 </div></code></code></pre>
 <pre><code><code><div>var variableBooleanaFalsa = false
 </div></code></code></pre>
-<ul>
-<li><strong>Number</strong>: Numeros enteros</li>
-</ul>
-<pre><code><code><div>var variableNumero = 16
-</div></code></code></pre>
-<h3 id="tipo-objeto">Tipo Objeto</h3>
+<h3 id="142-objeto">1.4.2. Objeto</h3>
 <p>El objeto es un tipo de variable que se inicializa con un nombre y una coleccion de propiedades, las cuales pueden ser modificadas, agregar nuevas y eliminar ya existentes.
 Mas adelante en el resumen veremos como acceder a las propiedades y más información sobre los objetos.</p>
 <p>Existen dos maneras de crear un objeto en JS.</p>
@@ -102,29 +155,29 @@ persona.colorDeOjos = &quot;azul&quot;;
 <p>También se puede crear vacío de la siguiente manera</p>
 <pre><code><code><div>var persona = {};
 </div></code></code></pre>
-<h3 id="cómo-saber-el-tipo-de-dato-de-una-variable">¿Cómo saber el tipo de dato de una variable?</h3>
+<h3 id="143-cómo-saber-el-tipo-de-dato-de-una-variable">1.4.3. ¿Cómo saber el tipo de dato de una variable?</h3>
 <p>Con el método <code>typeof</code> o <code>typeOf()</code> de la siguientes dos maneras</p>
 <pre><code><code><div>console.log(typeOf(variable))
 </div></code></code></pre>
 <pre><code><code><div>console.log(typeOf variable)
 </div></code></code></pre>
-<p>Siguiendo con el ejemplo de la variable <code>miNombre</code>:</p>
+<p>Por ejemplo creamos una variable con un <strong>string</strong> dentro llamada <code>miNombre</code>:</p>
 <pre><code><code><div>var miNombre = &quot;Anto&quot;
 console.log(miNombre)
 console.log(typeof(miNombre))
 </div></code></code></pre>
 <p><img src="file:///c:\Users\Antonella\Desktop\ResumenJS-Markdown\ejemplosCodigo\typeOfVariableconsola.png" alt="Ejemplo typeOfVariableconsola"></p>
 <p>Como se observa en la consola, el tipo de dato es <code>string</code></p>
-<p>También se puede consultar un tipo de dato de manera literal, por ejemplo:</p>
+<p>También se puede consultar un dato literal, por ejemplo:</p>
 <pre><code><code><div>console.log(typeOf (42))
 </div></code></code></pre>
 <p><img src="file:///c:\Users\Antonella\Desktop\ResumenJS-Markdown\ejemplosCodigo\typeOf42consola.png" alt="Ejemplo typeOfVariableconsola"></p>
 <p>Como se observa en la consola, el tipo de dato es <code>number</code></p>
-<h3 id="cosas-a-tener-en-cuenta-sobre-tipos-de-datos">Cosas a tener en cuenta sobre tipos de datos</h3>
+<p><strong>A tener en cuenta:</strong></p>
 <ul>
 <li>JavaScript trata string vacios <code>(&quot;&quot;)</code>, al <code>0</code> , <code>undefined</code> y <code>null</code> como <code>false</code>. Todo el resto es <code>true</code>.</li>
 </ul>
-<h2 id="operadores-aritméticos">Operadores Aritméticos</h2>
+<h2 id="15-operadores-aritméticos">1.5. Operadores Aritméticos</h2>
 <ul>
 <li>( <code>-</code> ) resta</li>
 <li>( <code>+</code> ) suma</li>
@@ -132,7 +185,276 @@ console.log(typeof(miNombre))
 <li>( <code>/</code> ) división (cociente)</li>
 <li>( <code>%</code> ) módulo (resto de una división)</li>
 </ul>
-<h2 id="operadores-de-comparación">Operadores de Comparación</h2>
+<p><strong>DATO</strong>: Para hacer una operación y una asignación a la vez se pueden usar los siguientes operadores:</p>
+<ul>
+<li><code>+=</code></li>
+<li><code>-=</code></li>
+<li><code>*=</code></li>
+<li><code>/=</code></li>
+</ul>
+<p>Entonces:</p>
+<pre><code><code><div>var i = i + 1
+</div></code></code></pre>
+<p>es igual a:</p>
+<pre><code><code><div>var i += 1
+</div></code></code></pre>
+<h2 id="16-operadores-de-comparación">1.6. Operadores de Comparación</h2>
+<p>En ocaciones precisamos de operadores que nos permitan comparar entre una variable y otra, o un valor en especifico y una variable.</p>
+<p>Las preguntas devulven un valor booleano (<code>true</code> o <code>false</code>) Es cuando entran los siguientes:</p>
+<ul>
+<li>
+<p>( <code>==</code> ) Devuelve verdadero si son iguales</p>
+</li>
+<li>
+<p>( <code>===</code> ) Devuelve verdadero si los operandos son iguales y del mismo tipo.</p>
+</li>
+<li>
+<p>( <code>!=</code> ) Devuelve verdadero si no son iguales</p>
+</li>
+<li>
+<p>( <code>!==</code> ) Devuelve verdadero si los operandos no son iguales y / o no del mismo tipo</p>
+</li>
+<li>
+<p>( <code>!</code> ) Negación</p>
+</li>
+<li>
+<p>( <code>&lt;</code> ) Menor que</p>
+</li>
+<li>
+<p>( <code>&gt;</code> ) Mayor que</p>
+</li>
+<li>
+<p>( <code>&lt;=</code> ) Menor o igual que</p>
+</li>
+<li>
+<p>( <code>&gt;=</code> ) Mayor o igual que</p>
+</li>
+</ul>
+<h2 id="17-conectores">1.7. Conectores</h2>
+<p>Ya aprendimos como comparar dos variables, pero a veces precisamos hacer preguntas mas extensas y comparar más valores, por ejemplo:</p>
+<p>¿Es la variable <code>x &gt; 18</code> <strong>Y</strong> <code>x &lt; 30</code>?</p>
+<p>Lo que quiere decir: ¿Es <code>x</code> mayor que 18 <strong>Y</strong> menor que 30?</p>
+<p>Para ésto nos ayudamos con los siguientes operadores, los cuales también devuelven un valor booleano.</p>
+<ul>
+<li>
+<p>( <code>||</code> ) significa ‘O’, da verdadero cuando se cumple alguna de todas las condiciones unidas por este conector.</p>
+</li>
+<li>
+<p>( <code>&amp;&amp;</code> ) significa ‘Y’ da verdadero cuando todas las condiciones unidas por éste se cumplen.</p>
+</li>
+</ul>
+<h2 id="18-condicionales">1.8. Condicionales</h2>
+<h3 id="181-if">1.8.1. if</h3>
+<p>Para realizar las preguntas de las que venimos hablando anteriormente en Conectores y Operadores de Comparación existe una función llamada <code>if</code>. Es una función de decisión, realiza una pregunta y si es verdadera se ejecuta el primer bloque de código inmediato que especifiquemos debajo.</p>
+<p>La sintaxis es:</p>
+<pre><code><code><div>if(condicion) {
+	valor verdadero;
+}
+</div></code></code></pre>
+<p>Ejemplo: Hacer un programa que, según una variable <code>edad</code>, determine si la persona es mayor o no, y lo imprima por consola.</p>
+<pre><code><code><div>var edad = 25
+
+if(edad &gt; 18){
+    console.log(&quot;Es mayor de edad&quot;)  //codigo que se ejecuta si la pregunta es verdadera
+}
+</div></code></code></pre>
+<p><img src="file:///c:\Users\Antonella\Desktop\ResumenJS-Markdown\ejemplosCodigo\ejemploIF.png" alt="Ejemplo IF"></p>
+<h3 id="182-ifelse">1.8.2. if...else</h3>
+<p>Pero ¿Qué pasa si la edad pasa a ser 17, por ejemplo?</p>
+<p>En nuestro caso anterior no sucede nada, porque no especificamos código en caso de que la consulta sea falsa, para eso existe el <code>if...else</code> :</p>
+<pre><code><code><div>var edad = 17
+
+if(edad &gt; 18){
+
+    console.log(&quot;Es mayor de edad&quot;) //codigo que se ejecuta si la pregunta es verdadera
+
+} else {
+
+    console.log(&quot;Es menor de edad&quot;) //codigo que se ejecuta si la pregunta es falsa
+
+}
+</div></code></code></pre>
+<p>Entonces, ahora sí veríamos en consola el mensaje <em>&quot;Es menor de edad&quot;</em>, ya que 17 no es mayor a 18, por lo que la sentencia es falsa entonces saldría por la parte falsa de la pregunta: el <code>else</code>.</p>
+<h3 id="183-ifelse-if">1.8.3. if…else if</h3>
+<p>En ocasiones necesitamos tener varias preguntas para la misma variable.</p>
+<p>Por ejemplo: crearemos un programa que nos diga si el color alojado en la variable <code>color</code> es primario o no.</p>
+<pre><code><code><div>var color = amarillo
+
+
+if(color === 'rojo'){
+
+    console.log(&quot;Es color primario&quot;)
+
+} else if (color === 'azul'){
+
+    console.log(&quot;Es color primario&quot;)
+    
+} else if (color === 'amarillo'){
+
+    console.log(&quot;Es color primario&quot;)
+
+} else {
+
+    console.log(&quot;No es color primario&quot;)
+}
+</div></code></code></pre>
+<p>El recorrido que hace es el siguiente:</p>
+<ol>
+<li>Primero compara la variable <code>color</code> con 'rojo', en caso de ser falso realiza la segunda pregunta</li>
+<li>¿la variable <code>color</code> contiene el valor 'azul'? en caso de ser falso (que en nuestro caso lo es), continúa con la siguiente pregunta,</li>
+<li>¿la variable <code>color</code> contiene el valor 'amarillo'? es verdadera entonces se ejecutaría el código que especificamos dentro de las llaves.</li>
+</ol>
+<p>En caso de que ningun <code>else if</code> sea verdadero, entonces se considera falso y se ejecuta el código especificado en <code>else</code>.</p>
+<p><strong>DATO:</strong> No es obligatorio especificar un <code>else</code>.</p>
+<p>Otra manera de preguntar lo mismo es utilizando los Operadores de comparación, los cuales nos ahorran un par de líneas de código, de la siguiente manera:</p>
+<pre><code><code><div>var color = amarillo
+
+
+if(color === 'rojo' || color === 'azul' || color === 'amarillo'){
+
+    console.log(&quot;Es color primario&quot;)
+
+} else {
+
+    console.log(&quot;No es color primario&quot;)
+}
+</div></code></code></pre>
+<p>Lo que en realidad estamos preguntando es:</p>
+<p>¿La variable <code>color</code> es rojo <strong>O</strong> azul <strong>O</strong> amarillo?
+Entonces, si una de las tres es verdadera, la pregunta o condición se da por verdadera y veríamos en la consola <em>&quot;Es color primario&quot;</em>. En caso contrario, si no fuese ninguna de las tres, entonces saldría por el <code>else</code>.</p>
+<p>Distinto sería si nosotros preguntásemos con el operador <code>&amp;&amp;</code> de la siguiente manera:</p>
+<pre><code><code><div>if(color === 'rojo' &amp;&amp; color === 'azul' &amp;&amp; color === 'amarillo')
+</div></code></code></pre>
+<p>Esto en nuestro ejemplo no tiene mucho sentido, ya que lo que estaría preguntando es:</p>
+<p>¿La variable <code>color</code> es rojo, azul <strong>Y</strong> amarillo a la vez?
+Ya que para ser considerada verdadera la condición deben cumplirse las tres preguntas a la vez, por estar unidas con el operador llamado <code>AND</code> o <code>Y</code> o <code>&amp;&amp;</code>.</p>
+<h3 id="184-switch">1.8.4. switch</h3>
+<p>A veces al tener una gran cantidad de opciones, la sintaxis del <code>if..else if</code> resulta engorrosa, ahí es cuando es de ayuda el <code>switch</code>.</p>
+<p>La sintaxis es la siguiente:</p>
+<pre><code><code><div>var opcionCajero= 'Pago Servicios'
+
+switch(opcionCajero){
+
+    case 'Pago Servicios':
+        //codigo que se ejecuta en caso de que la variable opcionCajero sea 'Pago Servicios'
+        break;
+
+    case 'Ver Saldo':
+        //codigo que se ejecuta en caso de que la variable opcionCajero sea 'Ver Saldo'
+        break;
+
+    case 'Pago Tarjeta':
+        //codigo que se ejecuta en caso de que la variable opcionCajero sea 'Pago Tarjeta'
+        break;
+
+    case 'Transferencia':
+        //codigo que se ejecuta en caso de que la variable opcionCajero sea 'Transferencia'
+        break;
+
+    default:
+        //codigo que se ejecuta en caso de que todas las anteriores hayan sido falsas.
+        break;
+}
+</div></code></code></pre>
+<p>En este ejemplo se simulan las opciones de un cajero automático.
+Cada opción o <code>case</code> se identifica en un renglon, seguido de dos puntos ( <code>:</code> ), debajo el código que se ejecutará en caso de que la variable tenga ese valor, y debajo la sentencia <code>break</code> la cuál hace que el switch acabe ahí y no siga preguntando por las demás opciones.</p>
+<p>También cuenta con una opción con la misma funcionalidad del <code>else</code> llamada <code>default</code>. En caso de que las opciones anteriores no hayan sido verdaderas, entonces ejecuta el código especificado debajo.</p>
+<p><strong>DATO:</strong> Al igual que en el <code>else</code> en el <code>for</code> no es obligatorio utilizar el <code>default</code> en el <code>switch</code>.</p>
+<h2 id="19-loops--bucles">1.9. Loops / Bucles</h2>
+<p>Los loops se utilizan cuando necesitamos que determinado bloque de código se ejecute varias veces sin la necesidad de escribir una y otra vez las mismas líneas de código.</p>
+<h3 id="191-for">1.9.1. for</h3>
+<p>Cuando sabemos la cantidad de veces que se ejecutará el bloque de código podemos utilizar el <code>for</code>. Vamos a repasar la sintaxis con un ejemplo:</p>
+<p>Realicemos un programa que cuente del 0 al 10.
+Sin el <code>for</code> probablemente realizariamos algo así:</p>
+<pre><code><code><div>let i = 0;
+
+i = i + 1;
+i = i + 1;
+i = i + 1;
+i = i + 1;
+i = i + 1;
+i = i + 1;
+i = i + 1;
+i = i + 1;
+i = i + 1;
+i = i + 1;
+
+console.log(i);
+</div></code></code></pre>
+<p>//Output esperado: <strong>10</strong></p>
+<p>Con un <code>for</code> la sintaxis sería la siguiente:</p>
+<pre><code><code><div>for(let i = 0; i &lt;= 10 ; i++){
+    console.log(i)
+}
+</div></code></code></pre>
+<p>Entonces en el primer espacio creariamos la variable <code>i</code>  la cual inicializa en 0 (en nuestro ejemplo, puede inicializarse en cualquier otro número, o en una variable incluso por ejemplo <code>let i=edad</code>)</p>
+<p>En el segundo espacio luego del ( <code>;</code> ) se coloca la condición. Nuestro ejemplo lo que quiere decir es que el bloque se ejecutará siempre y cuando la variable <code>i</code> que creamos anteriormente sea igual o menor a 10.</p>
+<p>En el tercer espacio luego del segundo ( <code>;</code> ) se coloca la manera en la que va a ir sumando la variable <code>i</code></p>
+<p><strong>DATO:</strong> El <code>i++</code> es lo mismo que hacer <code>i = i + 1</code> suma uno a la vez.</p>
+<p>Así nos aseguramos que el bloque de código - <em>en nuestro caso un console.log(i)</em> - se ejecute 11 veces (sumando del 0 al 11)</p>
+<p><strong>A tener en cuenta:</strong></p>
+<ul>
+<li>
+<p>Si la variable <code>i</code> es creada dentro del <code>for</code> como hicimos en nuestro caso, entonces esta es <strong>local</strong>, lo que quiere decir que se puede utilizar solo dentro del for, si intentamos utilizarla fuera, nos va a dar un error la consola.</p>
+<p>Si ejecutamos el mismo código de ejemplo pero agregandole una línea por fuera del for que realice un <code>console.log(i)</code> :</p>
+</li>
+</ul>
+<pre><code><code><div>for (let i = 0 ; i&lt;=10 ; i++){
+    console.log(i)
+}
+
+console.log(i)
+</div></code></code></pre>
+<p>Nuestro output se verá de la siguiente manera:</p>
+<p><img src="file:///c:\Users\Antonella\Desktop\ResumenJS-Markdown\ejemplosCodigo\errorFor.png" alt="Error FOR"></p>
+<p>Observamos que la variable <code>i</code> existe dentro del <code>for</code> por las 11 impresiones de ésta en la consola. Pero cuando queremos imprimirla por fuera, nos dice que &quot;<code>i</code> no está definida&quot;. Porque como dijimos anteriormente, es una variable <strong>local</strong>.</p>
+<ul>
+<li>Es distinto cuando la variable la creamos por fuera del for, de la siguiente manera:</li>
+</ul>
+<pre><code><code><div>let i
+
+for (i = 0 ; i&lt;=10 ; i++){
+    console.log(i)
+}
+
+console.log(&quot;la variable i contiene el numero: &quot;)
+console.log(i)
+</div></code></code></pre>
+<p>Nuestra consola va a mostrar lo siguiente:</p>
+<p><img src="file:///c:\Users\Antonella\Desktop\ResumenJS-Markdown\ejemplosCodigo\forVariableFuera.png" alt="FOR Variable por fuera "></p>
+<p>Donde podemos ver que la variable existe dentro y fuera del <code>for</code>.</p>
+<p><strong>DATO:</strong> La variable <code>i</code> por fuera del <code>for</code> muestra el número 11 y no 10 porque antes de &quot;entrar&quot; a hacer de nuevo el loop, en cada ejecución lo que hace es aumenta <code>i</code> en el valor que nosotros hayamos puesto de antemano <em>(en nuestro ejemplo <code>i++</code>)</em> y ahí realiza la consulta <em>(en nuestro ejemplo <code>i &lt;= 10</code>)</em>, como 11 no es &lt;= 10 sale del <code>for</code>, pero a <code>i</code> lo deja aumentado.</p>
+<h3 id="192-while">1.9.2. while</h3>
+<p>Si precisamos que un bloque de código se ejecute una indeterminada cantidad de veces podemos utilizar el <code>while</code>. La traducción literal al español es &quot;mientras&quot;, y funciona de la siguiente manera:</p>
+<pre><code><code><div>while(condición){
+
+    //codigo que se ejecuta mientras la condición sea verdadera
+
+}
+</div></code></code></pre>
+<p>Utilizando el mismo ejemplo de sumar de 0 a 10, el código sería el siguiente:</p>
+<pre><code><code><div>let i = 0
+
+while(i &lt;= 10){
+    i+=1 //es lo mismo que colocar i = i + 1
+    console.log(i)
+}
+</div></code></code></pre>
+<p>Se ejecutará el código siempre y cuando i sea menor o igual que 10. Y el resultado en la consola sería el mismo que para el <code>for</code>.</p>
+<p><strong>A tener en cuenta:</strong></p>
+<ul>
+<li>En el caso del <code>while</code> la variable deberá ser creada e inicializada fuera. Si lo intentamos crear dentro, dará error.</li>
+<li>No entrará al ciclo ninguna vez si la condición no es verdadera.</li>
+</ul>
+<h3 id="193-do-while">1.9.3. do while</h3>
+<p>El ciclo <code>do while</code> es igual que el <code>while</code> con una diferencia:</p>
+<p><strong>El código siempre se ejecuta como mínimo una vez</strong> ya que primero se ejecuta el bloque y luego se evalúa la condición por primera vez.
+En caso de que diese falso, continúa, si la condición es verdadera, vuelve a ejecutar el código.</p>
+<p>La sintaxis es la sigiente:</p>
+<pre><code><code><div>do {
+  //código a ejecutar la primera vez si o si, y luego se ejecuta si la condición es verdadera
+} while (condición);
+</div></code></code></pre>
 
     </body>
     </html>
